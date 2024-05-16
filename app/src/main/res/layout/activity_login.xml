@@ -7,4 +7,76 @@
     android:background="@drawable/bg"
     tools:context=".Login">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="419dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pasafit_running_default" />
+
+    <EditText
+        android:id="@+id/emaillogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="299dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/lime_green"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/email" />
+
+    <EditText
+        android:id="@+id/passwordlogin"
+        android:layout_width="280dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="202dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/password"
+        android:textColor="@color/lime_green"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emaillogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="276dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="85dp"
+        android:backgroundTint="@color/lime_green"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordlogin"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
