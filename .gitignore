@@ -34,3 +34,9 @@ google-services.json
 
 # Other ignored files
 .DS_Store
+
+#Java Class Files
+.class
+
+#version control
+vcs.xml
