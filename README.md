@@ -2,19 +2,49 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://i.imgur.com/7OpEU6Z.png" alt="Alt text" title="WAS LOGO">
+    <img src="https://i.imgur.com/kjUq6Rw.png" alt="Alt text" title="PASAFIT LOGO">
   </a>
 </p>
 
 <!-- Project Title -->
 
-<h1 align="center">PASAFIT</h1>
+<h1 align="center"></h1>
 
 <!-- Project Descripton -->
 
 <p align="justify">
   PasaFit is an fitness app that dedicates to support you in achieving your fitness health and wellness goals. Whether you're an experienced or just starting your fitness journey, PasaFit has something for everyone's fitness needs
 </p>
+
+<br>
+
+## Table of Contents
+- [Installation](#installation)
+- [Features](#features)
+- [Project Info](#project-info)
+- [Screenshots](#screenshots)
+
+<br>
+
+## Installation
+
+#### Download:
+1. Download the project by downloading the [ZIP](https://github.com/kingkuys2123/PasaFit/archive/refs/heads/master.zip)
+2. Extract it and open the project via **[Android Studio](https://developer.android.com/studio?gad_source=1)**
+3. Run the PasaFit app
+#### Clone:
+1. Clone the project by using `git clone` with [Git Bash](https://git-scm.com/downloads):
+```
+https://github.com/kingkuys2123/PasaFit.git
+```
+2. Open the project via **[Android Studio](https://developer.android.com/studio?gad_source=1)**
+3. Run the PasaFit app
+
+<br>
+
+## Features
+
+To be added
 
 <br>
 
@@ -47,3 +77,10 @@
     <a href="https://github.com/kingkuys2123"><img width="64" title="Quitco, Kyle Matthew M." src="https://avatars.githubusercontent.com/u/114457180?v=4" alt="kingkuys2123" /></a>
     <a href="https://www.facebook.com/xyrilldereck.canete"><img width="64" title="Cañete, Xyrill Dereck N," src="https://i.imgur.com/ZFqN7IP.jpeg" alt="xyrilldereck.canete" /></a>
   </a>
+
+<br>
+<br>
+
+## Screenshots
+
+To be added

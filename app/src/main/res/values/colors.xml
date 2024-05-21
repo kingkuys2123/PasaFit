@@ -7,15 +7,18 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FDFDFD</color>
 
     <!-- Pasafit colors -->
 
-    <color name="white_2">#FCFCFC</color>
-    <color name="davys_gray">#5B5B5B</color>
-    <color name="jet">#3A3A38</color>
-    <color name="eerie_black">#1B1B1B</color>
-    <color name="night">#101010</color>
-    <color name="lime_green">#47D149</color>
+    <color name="eerie_black">#222622</color>
+    <color name="eerie_black_2">#1C1F1C</color>
+    <color name="eerie_black_3">#151815</color>
+    <color name="night">#0E110E</color>
+    <color name="sea_green">#4B8E4B</color>
+
+    <!-- Other Colors -->
+
+    
 
 </resources>

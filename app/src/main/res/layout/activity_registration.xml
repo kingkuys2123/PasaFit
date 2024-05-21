@@ -8,73 +8,78 @@
     tools:context=".Registration">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/imageViewLabelRegister"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pasafit_running_default" />
+        app:srcCompat="@drawable/pasafit_label" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="192dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.133">
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLabelRegister"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register"
-            android:textColor="@color/eerie_black" />
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/editTxtFirstNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:hint="@string/enter_first_name"
+            android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/editTxtLastNameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_last_name"
+            android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/editTxtUsernameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_username"
+            android:inputType="text"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/editTxtEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/editTxtPasswordRegister"
@@ -83,8 +88,8 @@
             android:hint="@string/enter_password"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <EditText
             android:id="@+id/editTextConfirmPasswordRegister"
@@ -93,15 +98,16 @@
             android:hint="@string/reenter_password"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:textColor="@color/white_2"
-            android:textColorHint="@color/eerie_black" />
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/darker_gray" />
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/eerie_black"
-            android:text="Register" />
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/sea_green"
+            android:text="@string/register" />
     </LinearLayout>
 
     <ProgressBar

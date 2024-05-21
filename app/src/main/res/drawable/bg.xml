@@ -7,7 +7,7 @@
                 android:angle="315"
                 android:startColor="@color/night"
                 android:centerColor="@color/night"
-                android:endColor="@color/eerie_black"
+                android:endColor="@color/night"
                 android:type="linear"/>
         </shape>
     </item>

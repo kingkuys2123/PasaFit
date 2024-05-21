@@ -1,17 +1,24 @@
 package com.example.pasafit;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnMainGetStarted;
+    private TextView textViewOnboardWelcomeHeader;
     private FirebaseAuth fAuth;
 
     @Override
@@ -44,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void init(){
         btnMainGetStarted = findViewById(R.id.btnMainGetStarted);
+        textViewOnboardWelcomeHeader = findViewById(R.id.textViewOnboardWelcomeHeader);
+
+        String welcomeText = textViewOnboardWelcomeHeader.getText().toString();
+
+        SpannableString spannableString = new SpannableString(welcomeText);
+        String target = "PASAFIT";
+        int startWelcomeText = welcomeText.indexOf(target);
+        int endWelcomeText = startWelcomeText + target.length();
+        int sea_green = ContextCompat.getColor(this, R.color.sea_green);
+
+        spannableString.setSpan(new ForegroundColorSpan(sea_green), startWelcomeText, endWelcomeText, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        textViewOnboardWelcomeHeader.setText(spannableString);
     }
 
 }
