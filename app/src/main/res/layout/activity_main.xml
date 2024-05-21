@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <Button
-        android:id="@+id/btnOnboardNext"
+        android:id="@+id/btnMainGetStarted"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"

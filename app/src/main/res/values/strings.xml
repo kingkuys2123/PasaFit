@@ -5,9 +5,17 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
+    <string name="email_or_username">Email/Username</string>
     <string name="onboard_welcome_header">WELCOME TO PASAFIT</string>
     <string name="onboard_welcome_text">Your ultimate fitness companion. Experienced or beginner, we\'re with you every step.</string>
     <string name="onboard_get_started_button">Get Started</string>
     <string name="content_description">resource</string>
     <string name="copyright">© 2024 Team Pasaron. All rights reserved.</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="reenter_password">Re-enter Password</string>
+    <string name="placeholder">Lorem ipsum...</string>
 </resources>
