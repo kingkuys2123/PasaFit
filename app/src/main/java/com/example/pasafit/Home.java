@@ -25,7 +25,9 @@ public class Home extends AppCompatActivity {
         /* Ma direct ang users to dashboard kung logged in pa sila
 
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            Intent intent = new Intent(Login.this, Dashboard.class);
+
+            startActivity(intent);
             finish();
         }
 
@@ -37,6 +39,7 @@ public class Home extends AppCompatActivity {
                 Intent intent = new Intent(Home.this, Login.class);
 
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -46,6 +49,7 @@ public class Home extends AppCompatActivity {
                 Intent intent = new Intent(Home.this, Registration.class);
 
                 startActivity(intent);
+                finish();
             }
         });
 

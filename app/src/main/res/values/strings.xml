@@ -11,15 +11,17 @@
     <string name="onboard_get_started_button">Get Started</string>
     <string name="content_description">resource</string>
     <string name="copyright">© 2024 Team Pasaron. All rights reserved.</string>
-    <string name="enter_first_name">Enter First Name</string>
-    <string name="enter_last_name">Enter Last Name</string>
-    <string name="enter_username">Enter Username</string>
-    <string name="enter_email">Enter Email</string>
-    <string name="enter_password">Enter Password</string>
-    <string name="reenter_password">Re-enter Password</string>
+    <string name="enter_first_name">First Name</string>
+    <string name="enter_last_name">Last Name</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="reenter_password">Confirm Password</string>
     <string name="placeholder">Lorem ipsum...</string>
     <string name="login_message">Log In to your Account</string>
+    <string name="register_message">Create your Account</string>
     <string name="have_an_account">Already have any account?</string>
+    <string name="dont_have_an_account">Do not have an account?</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
 </resources>

@@ -8,150 +8,163 @@
     tools:context=".Login">
 
 
-    <ImageView
-        android:id="@+id/imageViewLabelLogin"
-        android:layout_width="256dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pasafit_label" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".LoginActivity">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/login_message"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/input_border"
-            android:textColorHint="@color/sea_green"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@android:color/transparent"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/white"
-            app:hintTextColor="@color/sea_green"
-            app:startIconCheckable="true"
-            app:startIconDrawable="@drawable/system_regular_8_account"
-            app:startIconTint="@color/white">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTxtEmailUsernameLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:backgroundTint="@android:color/transparent"
-                android:drawableTint="@color/sea_green"
-                android:hint="@string/email_or_username"
-                android:inputType="text|textEmailAddress"
-                android:textColor="@color/white"
-                android:textColorHighlight="@color/sea_green" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/input_border"
-            android:textColorHint="@color/sea_green"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@android:color/transparent"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/white"
-            app:hintTextColor="@color/sea_green"
-            app:startIconDrawable="@drawable/system_regular_90_lock_closed"
-            app:startIconTint="@color/white">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTxtPasswordLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:backgroundTint="@android:color/transparent"
-                android:drawableTint="@color/sea_green"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:textColor="@color/white"
-                android:textColorHighlight="@color/sea_green" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/sea_green"
-            android:text="@string/login"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewHaveAnAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/have_an_account"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/textViewSignIn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:clickable="true"
-                android:text="@string/sign_in"
-                android:textColor="@color/sea_green" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBarLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminateTint="@color/sea_green"
-        android:progressTintMode="src_over"
-        android:visibility="gone"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewLabelLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp"
+                android:layout_marginBottom="96dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pasafit_label" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLabelLogin"
+                tools:context=".LoginActivity">
+
+                <TextView
+                    android:id="@+id/textViewLoginHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/login_message"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/input_border"
+                    android:textColorHint="@color/sea_green"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/white"
+                    app:hintTextColor="@color/sea_green"
+                    app:startIconCheckable="true"
+                    app:startIconDrawable="@drawable/system_regular_8_account"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTxtEmailUsernameLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableTint="@color/sea_green"
+                        android:hint="@string/email_or_username"
+                        android:inputType="text|textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/sea_green" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/input_border"
+                    android:textColorHint="@color/sea_green"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/white"
+                    app:hintTextColor="@color/sea_green"
+                    app:startIconDrawable="@drawable/system_regular_90_lock_closed"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTxtPasswordLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableTint="@color/sea_green"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/sea_green" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/sea_green"
+                    android:text="@string/login"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewHaveAnAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/have_an_account"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/textViewSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/sea_green" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBarLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginBottom="70dp"
+                    android:indeterminateTint="@color/sea_green"
+                    android:progressTintMode="src_over"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

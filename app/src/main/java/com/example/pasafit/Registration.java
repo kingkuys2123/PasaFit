@@ -8,12 +8,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -24,7 +25,8 @@ import java.util.Map;
 
 public class Registration extends AppCompatActivity {
 
-    private EditText editTxtEmailRegister, editTxtPasswordRegister, editTextConfirmPasswordRegister, editTxtFirstNameRegister, editTxtLastNameRegister, editTxtUsernameRegister;
+    private TextInputEditText editTxtEmailRegister, editTxtPasswordRegister, editTextConfirmPasswordRegister, editTxtFirstNameRegister, editTxtLastNameRegister, editTxtUsernameRegister;
+    private TextView textViewSignUp;
     private Button btnRegister;
     private ProgressBar progressBarRegister;
     private FirebaseAuth fAuth;
@@ -47,11 +49,14 @@ public class Registration extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         progressBarRegister = findViewById(R.id.progressBarRegister);
         editTextConfirmPasswordRegister = findViewById(R.id.editTextConfirmPasswordRegister);
+        textViewSignUp = findViewById(R.id.textViewSignUp);
 
         /* Ma direct ang users to dashboard kung logged in pa sila
 
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            Intent intent = new Intent(Login.this, Dashboard.class);
+
+            startActivity(intent);
             finish();
         }
 
@@ -63,6 +68,17 @@ public class Registration extends AppCompatActivity {
                 registerNewUser();
             }
         });
+
+        textViewSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Registration.this, Login.class);
+
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     private void registerNewUser() {
@@ -75,6 +91,21 @@ public class Registration extends AppCompatActivity {
         String password = editTxtPasswordRegister.getText().toString();
         String confirm_password = editTextConfirmPasswordRegister.getText().toString();
 
+        if(TextUtils.isEmpty(first_name)){
+            Toast.makeText(getApplicationContext(), "Please enter first name!!", Toast.LENGTH_LONG).show();
+            progressBarRegister.setVisibility(View.GONE);
+            return;
+        }
+        if(TextUtils.isEmpty(last_name)){
+            Toast.makeText(getApplicationContext(), "Please enter last name!!", Toast.LENGTH_LONG).show();
+            progressBarRegister.setVisibility(View.GONE);
+            return;
+        }
+        if(TextUtils.isEmpty(username)){
+            Toast.makeText(getApplicationContext(), "Please user name!!", Toast.LENGTH_LONG).show();
+            progressBarRegister.setVisibility(View.GONE);
+            return;
+        }
         if(TextUtils.isEmpty(email)){
             Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_LONG).show();
             progressBarRegister.setVisibility(View.GONE);

@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         /* Ma direct ang users to dashboard kung logged in pa sila
 
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            Intent intent = new Intent(Login.this, Dashboard.class);
+
+            startActivity(intent);
             finish();
         }
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Home.class);
 
                 startActivity(intent);
+                finish();
             }
         });
 
