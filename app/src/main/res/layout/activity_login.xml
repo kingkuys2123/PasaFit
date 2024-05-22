@@ -22,7 +22,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
-        android:layout_height="256dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="32dp"
@@ -36,41 +36,71 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/login"
+            android:text="@string/login_message"
+            android:textAlignment="center"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editTxtEmailUsernameLogin"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_border"
+            android:textColorHint="@color/sea_green"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeColor="@android:color/transparent"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/sea_green"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/system_regular_8_account"
+            app:startIconTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTxtEmailUsernameLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="@android:color/transparent"
+                android:drawableTint="@color/sea_green"
+                android:hint="@string/email_or_username"
+                android:inputType="text|textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/sea_green" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/email_or_username"
-            android:inputType="text"
-            android:textColor="@color/white"
-            android:textColorHint="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:background="@drawable/input_border"
+            android:textColorHint="@color/sea_green"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeColor="@android:color/transparent"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/sea_green"
+            app:startIconDrawable="@drawable/system_regular_90_lock_closed"
+            app:startIconTint="@color/white">
 
-        <EditText
-            android:id="@+id/editTxtPasswordLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:hint="@string/password"
-            android:inputType="text|textPassword"
-            android:minHeight="48dp"
-            android:textColor="@color/white"
-            android:textColorHint="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTxtEmailUsernameLogin" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTxtPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="@android:color/transparent"
+                android:drawableTint="@color/sea_green"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/sea_green" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btnLogin"
@@ -85,16 +115,43 @@
             app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin"
             app:layout_constraintVertical_bias="0.0" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewHaveAnAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_an_account"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:text="@string/sign_in"
+                android:textColor="@color/sea_green" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBarLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:indeterminateTint="@color/sea_green"
+        android:progressTintMode="src_over"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

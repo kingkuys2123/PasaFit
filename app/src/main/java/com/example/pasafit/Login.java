@@ -7,21 +7,23 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class Login extends AppCompatActivity {
 
-    private EditText editTxtEmailUsernameLogin, editTxtPasswordLogin;
+    private TextInputEditText editTxtEmailUsernameLogin, editTxtPasswordLogin;
+
+    private TextView textViewSignIn;
     private Button btnLogin;
     private ProgressBar progressBarLogin;
 
@@ -40,6 +42,7 @@ public class Login extends AppCompatActivity {
         editTxtPasswordLogin = findViewById(R.id.editTxtPasswordLogin);
         btnLogin = findViewById(R.id.btnLogin);
         progressBarLogin = findViewById(R.id.progressBarLogin);
+        textViewSignIn = findViewById(R.id.textViewSignIn);
 
         /* Ma direct ang users to dashboard kung logged in pa sila
 
@@ -61,6 +64,15 @@ public class Login extends AppCompatActivity {
                 loginUser();
             }
         });
+
+        textViewSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Registration.class));
+                finish();
+            }
+        });
+
     }
 
     private void loginUser() {
