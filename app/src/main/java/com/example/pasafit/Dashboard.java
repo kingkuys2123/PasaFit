@@ -49,9 +49,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 if (documentSnapshot != null && documentSnapshot.exists()) {
-                    textViewHelloMessage.setText("Hello, " + documentSnapshot.getString("username"));
-                } else {
-                    textViewHelloMessage.setText("Hello, User");
+                    textViewHelloMessage.setText("Hello, " + documentSnapshot.getString("username") + "!");
                 }
             }
         });
