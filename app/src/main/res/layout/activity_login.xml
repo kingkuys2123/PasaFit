@@ -140,7 +140,7 @@
                         android:id="@+id/textViewHaveAnAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/have_an_account"
+                        android:text="@string/dont_have_an_account"
                         android:textColor="@color/white" />
 
                     <TextView
