@@ -36,4 +36,5 @@
     <string name="txt_calc_ibw">Calculate IBW</string>
     <string name="txt_calc_ibw_tooltip">Calculate IBW</string>
     <string name="txt_calc_ideal_weight_tooltip">Calculate your Ideal Weight</string>
+    <string name="birthdate">Birthday</string>
 </resources>
