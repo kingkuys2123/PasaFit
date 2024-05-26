@@ -38,4 +38,8 @@
     <string name="txt_calc_ideal_weight_tooltip">Calculate your Ideal Weight</string>
     <string name="choose_category">Choose Category</string>
     <string name="left_arrow">&lt;</string>
+    <string name="category_strength">Strength</string>
+    <string name="category_endurance">Endurance</string>
+    <string name="category_balance">Balanace</string>
+    <string name="category_flexibility">Flexibility</string>
 </resources>

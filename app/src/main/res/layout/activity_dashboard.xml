@@ -41,7 +41,17 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_41_home"
-            app:tint="@color/sea_green" />
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_dashboard_exercises"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/system_regular_199_attribution"
+            app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/btn_dashboard_track"
@@ -51,7 +61,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_130_location_user"
-            app:tint="@color/sea_green" />
+            app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/btn_dashboard_calc"
@@ -61,7 +71,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_197_calculate"
-            app:tint="@color/sea_green" />
+            app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/btn_dashboard_profile"
@@ -71,7 +81,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_8_account"
-            app:tint="@color/sea_green" />
+            app:tint="@color/white" />
 
     </LinearLayout>
 
