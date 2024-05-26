@@ -93,9 +93,19 @@
                             android:id="@+id/textView4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/category_balance"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_exercise_list_balance_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/eerie_black_3"
+                            app:srcCompat="@drawable/system_regular_26_play" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -136,9 +146,19 @@
                             android:id="@+id/textView5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/category_endurance"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_exercise_list_endurance_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/eerie_black_3"
+                            app:srcCompat="@drawable/system_regular_26_play" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -186,9 +206,18 @@
                             android:id="@+id/textView6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/category_flexibility"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_exercise_list_flexibility_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/eerie_black_3"
+                            app:srcCompat="@drawable/system_regular_26_play" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -229,9 +258,18 @@
                             android:id="@+id/textView7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/category_strength"
                             android:textColor="@color/white"
                             android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_exercise_list_strength_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/eerie_black_3"
+                            app:srcCompat="@drawable/system_regular_26_play" />
                     </LinearLayout>
 
                 </LinearLayout>
