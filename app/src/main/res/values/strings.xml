@@ -25,6 +25,17 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="hello_dashboard">Hello, User!</string>
+    <string name="fitness_calculator_header">Fitness Calculator</string>"
+    <string name="fitness_calculator_select">Select a fitness calculator to get started.</string>
+    <string name="txt_calc_bmi">Calculate BMI</string>
+    <string name="txt_calc_bmi_tooltip">Calculate your Body Mass Index</string>
+    <string name="txt_calc_bmr">Calculate BMR</string>
+    <string name="txt_calc_bmr_tooltip">Calculate your Basal Metabolic Rate</string>
+    <string name="txt_calc_bfat">Calculate Body Fat</string>
+    <string name="txt_calc_bfat_tooltip">Calculate your Body Fat Percentage</string>
+    <string name="txt_calc_ibw">Calculate IBW</string>
+    <string name="txt_calc_ibw_tooltip">Calculate IBW</string>
+    <string name="txt_calc_ideal_weight_tooltip">Calculate your Ideal Weight</string>
     <string name="choose_category">Choose Category</string>
     <string name="left_arrow">&lt;</string>
 </resources>

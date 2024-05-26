@@ -22,8 +22,8 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="410dp"
+        android:layout_height="64dp"
         android:background="@color/eerie_black"
         android:orientation="horizontal"
         android:padding="8dp"
@@ -34,44 +34,44 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btn_dashboard_home"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_41_home"
-            app:tint="@color/white" />
+            app:tint="@color/sea_green" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/btn_dashboard_track"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
-            android:src="@drawable/system_regular_10_analytics"
-            app:tint="@color/white" />
+            android:src="@drawable/system_regular_130_location_user"
+            app:tint="@color/sea_green" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btn_dashboard_calc"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
-            android:src="@drawable/system_regular_100_flag"
-            app:tint="@color/white" />
+            android:src="@drawable/system_regular_197_calculate"
+            app:tint="@color/sea_green" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btn_dashboard_profile"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_8_account"
-            app:tint="@color/white" />
+            app:tint="@color/sea_green" />
 
     </LinearLayout>
 

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Fitness_Calculator">
+
+    <TextView
+        android:id="@+id/txtView_FitnessCalculatorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fitness_calculator_header"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:id="@+id/mainPadding"
+        android:layout_width="383dp"
+        android:layout_height="595dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="297dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="191dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btn_calc_bmi"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_weight="1"
+                            android:foregroundGravity="center"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/wired_lineal_312_avatar_icon_search" />
+
+                        <TextView
+                            android:id="@+id/txt_calc_bmi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/txt_calc_bmi"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btn_calc_bmr"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/wired_lineal_1692_running_shoe" />
+
+                        <TextView
+                            android:id="@+id/txt_calc_bmr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/txt_calc_bmr"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btn_calc_bodyfat"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/wired_lineal_562_fastfood" />
+
+                        <TextView
+                            android:id="@+id/txt_calc_bodyfat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/txt_calc_bfat"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btn_calc_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/wired_lineal_608_kitchen_scale" />
+
+                        <TextView
+                            android:id="@+id/txt_calc_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/txt_calc_ibw"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtView_FitnessCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fitness_calculator_select"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

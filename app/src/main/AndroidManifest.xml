@@ -21,6 +21,9 @@
             android:name=".ExercisesCategories"
             android:exported="false" />
         <activity
+            android:name=".Fitness_Calculator"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity
