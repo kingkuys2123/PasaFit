@@ -25,4 +25,6 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="hello_dashboard">Hello, User!</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="left_arrow">&lt;</string>
 </resources>

@@ -12,6 +12,15 @@
         android:theme="@style/Theme.PasaFit"
         tools:targetApi="31">
         <activity
+            android:name=".Exercise"
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseList"
+            android:exported="false" />
+        <activity
+            android:name=".ExercisesCategories"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity
