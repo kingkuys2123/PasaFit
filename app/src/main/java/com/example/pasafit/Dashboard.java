@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +20,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class Dashboard extends AppCompatActivity {
 
     TextView textViewHelloMessage;
+
+    ImageButton btn_dashboard_exercises;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -51,6 +55,15 @@ public class Dashboard extends AppCompatActivity {
                 if (documentSnapshot != null && documentSnapshot.exists()) {
                     textViewHelloMessage.setText("Hello, " + documentSnapshot.getString("username") + "!");
                 }
+            }
+        });
+
+        btn_dashboard_exercises = findViewById(R.id.btn_dashboard_exercises);
+        btn_dashboard_exercises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this, ExercisesCategories.class);
+                startActivity(intent);
             }
         });
     }

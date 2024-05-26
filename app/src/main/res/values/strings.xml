@@ -40,6 +40,6 @@
     <string name="left_arrow">&lt;</string>
     <string name="category_strength">Strength</string>
     <string name="category_endurance">Endurance</string>
-    <string name="category_balance">Balanace</string>
+    <string name="category_balance">Balance</string>
     <string name="category_flexibility">Flexibility</string>
 </resources>
