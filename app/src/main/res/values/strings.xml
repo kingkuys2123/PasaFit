@@ -42,4 +42,5 @@
     <string name="category_endurance">Endurance</string>
     <string name="category_balance">Balanace</string>
     <string name="category_flexibility">Flexibility</string>
+    <string name="birthdate">Birthdate</string>
 </resources>
