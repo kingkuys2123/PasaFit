@@ -12,6 +12,15 @@
         android:theme="@style/Theme.PasaFit"
         tools:targetApi="31">
         <activity
+            android:name=".StepTracker"
+            android:exported="false" />
+        <activity
+            android:name=".SleepTracker"
+            android:exported="false" />
+        <activity
+            android:name=".Tracker"
+            android:exported="false" />
+        <activity
             android:name=".Exercise"
             android:exported="false" />
         <activity

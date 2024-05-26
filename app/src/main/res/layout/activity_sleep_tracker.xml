@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#100B0B"
+    tools:context=".SleepTracker">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="txtSleep"
+        android:textColor="#FAF6F6"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="Sleep Tracker" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pasafit_label" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/sea_green"
+        android:text="Stop"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="264dp"
+        android:layout_height="339dp"
+        android:background="#457111"
+        android:backgroundTint="@color/sea_green"
+        android:gravity="center"
+        android:textColor="#F6F2F2"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/sea_green"
+        android:text="Start"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="220dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

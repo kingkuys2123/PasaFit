@@ -21,7 +21,7 @@ public class Dashboard extends AppCompatActivity {
 
     TextView textViewHelloMessage;
 
-    ImageButton btn_dashboard_exercises;
+    ImageButton btn_dashboard_exercises, btn_dashboard_tracker;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -55,6 +55,15 @@ public class Dashboard extends AppCompatActivity {
                 if (documentSnapshot != null && documentSnapshot.exists()) {
                     textViewHelloMessage.setText("Hello, " + documentSnapshot.getString("username") + "!");
                 }
+            }
+        });
+        btn_dashboard_tracker = findViewById(R.id.btn_dashboard_track);
+
+        btn_dashboard_tracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard.this, Tracker.class);
+                startActivity(intent);
             }
         });
 
