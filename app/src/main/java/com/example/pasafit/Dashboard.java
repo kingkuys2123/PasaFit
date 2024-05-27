@@ -41,8 +41,6 @@ public class Dashboard extends AppCompatActivity {
         if (currentUser == null) {
             Intent intent = new Intent(Dashboard.this, Home.class);
             startActivity(intent);
-            finish();
-            return;
         }
 
         userID = currentUser.getUid();

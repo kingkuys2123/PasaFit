@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <LinearLayout
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
         android:background="@color/eerie_black"
         android:orientation="horizontal"

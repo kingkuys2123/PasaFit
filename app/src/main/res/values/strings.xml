@@ -43,4 +43,6 @@
     <string name="category_balance">Balance</string>
     <string name="category_flexibility">Flexibility</string>
     <string name="birthdate">Birthdate</string>
+    <string name="exercises">Exercises</string>
+    <string name="exercise">Exercise</string>
 </resources>
