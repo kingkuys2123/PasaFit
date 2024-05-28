@@ -21,7 +21,7 @@ public class Dashboard extends AppCompatActivity {
 
     TextView textViewHelloMessage;
 
-    ImageButton btn_dashboard_exercises, btn_dashboard_tracker;
+    ImageButton btn_dashboard_exercises, btn_dashboard_tracker, btn_dashboard_calc;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -70,6 +70,16 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Dashboard.this, ExercisesCategories.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_dashboard_calc = findViewById(R.id.btn_dashboard_calc);
+
+        btn_dashboard_calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard.this, Fitness_Calculator.class);
                 startActivity(intent);
             }
         });

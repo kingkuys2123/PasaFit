@@ -6,23 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp"
     tools:context=".Fitness_Calculator">
 
     <TextView
         android:id="@+id/txtView_FitnessCalculatorTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="164dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="32dp"
         android:text="@string/fitness_calculator_header"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/mainPadding"
-        android:layout_width="383dp"
-        android:layout_height="595dp"
+        android:layout_width="385dp"
+        android:layout_height="584dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:orientation="vertical"
@@ -43,7 +48,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="297dp"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="191dp"
@@ -56,17 +61,22 @@
                             android:layout_height="250dp"
                             android:layout_weight="1"
                             android:foregroundGravity="center"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/wired_lineal_312_avatar_icon_search" />
+                            app:srcCompat="@drawable/body" />
 
                         <TextView
                             android:id="@+id/txt_calc_bmi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:clickable="true"
                             android:gravity="center"
+                            android:onClick="@string/txt_calc_bmi_tooltip"
                             android:text="@string/txt_calc_bmi"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:tooltipText="@string/txt_calc_bmi_tooltip" />
 
                     </LinearLayout>
 
@@ -80,17 +90,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:layout_weight="1"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/wired_lineal_1692_running_shoe" />
+                            app:srcCompat="@drawable/metabolism__1_" />
 
                         <TextView
                             android:id="@+id/txt_calc_bmr"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:clickable="true"
                             android:gravity="center"
+                            android:onClick="@string/txt_calc_bmr_tooltip"
                             android:text="@string/txt_calc_bmr"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:tooltipText="@string/txt_calc_bmr_tooltip" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -108,17 +123,22 @@
                             android:id="@+id/btn_calc_bodyfat"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/wired_lineal_562_fastfood" />
+                            app:srcCompat="@drawable/fat" />
 
                         <TextView
                             android:id="@+id/txt_calc_bodyfat"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:clickable="true"
                             android:gravity="center"
+                            android:onClick="@string/txt_calc_bfat_tooltip"
                             android:text="@string/txt_calc_bfat"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:tooltipText="@string/txt_calc_bfat_tooltip" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -131,17 +151,23 @@
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:layout_gravity="center"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/wired_lineal_608_kitchen_scale" />
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/human" />
 
                         <TextView
                             android:id="@+id/txt_calc_weight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:clickable="true"
+                            android:contextClickable="false"
                             android:gravity="center"
+                            android:onClick="@string/txt_calc_ideal_weight_tooltip"
                             android:text="@string/txt_calc_ibw"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:tooltipText="@string/txt_calc_ibw_tooltip" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -153,9 +179,12 @@
         android:id="@+id/txtView_FitnessCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/fitness_calculator_select"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintBottom_toTopOf="@+id/mainPadding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_FitnessCalculatorTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
