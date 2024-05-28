@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/nav_btn_home_step_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -30,6 +31,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_execise_step_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -39,6 +41,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_trackers_step_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -48,6 +51,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_calculator_step_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -57,6 +61,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_profile_step_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

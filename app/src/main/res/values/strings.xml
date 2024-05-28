@@ -11,9 +11,9 @@
     <string name="onboard_get_started_button">Get Started</string>
     <string name="content_description">resource</string>
     <string name="copyright">© 2024 Team Pasaron. All rights reserved.</string>
-    <string name="enter_first_name">First Name</string>
-    <string name="enter_last_name">Last Name</string>
-    <string name="enter_username">Username</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
     <string name="enter_email">Email</string>
     <string name="enter_password">Password</string>
     <string name="reenter_password">Confirm Password</string>
@@ -42,7 +42,14 @@
     <string name="category_endurance">Endurance</string>
     <string name="category_balance">Balance</string>
     <string name="category_flexibility">Flexibility</string>
-    <string name="birthdate">Birthdate</string>
     <string name="exercises">Exercises</string>
     <string name="exercise">Exercise</string>
+    <string name="na">NA</string>
+    <string name="user_profile">User Profile</string>
+    <string name="personal_info">Personal Information:</string>
+    <string name="account_info">Account Information:</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_email">Change Email</string>
+    <string name="logout">Log Out</string>
 </resources>

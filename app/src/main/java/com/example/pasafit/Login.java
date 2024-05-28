@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -22,13 +23,14 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class Login extends AppCompatActivity {
 
     private TextInputEditText editTxtEmailUsernameLogin, editTxtPasswordLogin;
-
     private TextView textViewSignIn;
     private Button btnLogin;
     private ProgressBar progressBarLogin;
 
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
+
+    private static final String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +46,11 @@ public class Login extends AppCompatActivity {
         progressBarLogin = findViewById(R.id.progressBarLogin);
         textViewSignIn = findViewById(R.id.textViewSignIn);
 
-        /* Ma direct ang users to dashboard kung logged in pa sila
-
+        // If logged in pa ang user, ma redirect ang user to the dashboard
         if (fAuth.getCurrentUser() != null) {
             Intent intent = new Intent(Login.this, Dashboard.class);
-
             startActivity(intent);
-            finish();
         }
-
-        */
 
         String message = getIntent().getStringExtra("registration_successful");
         if (message != null) {
@@ -101,7 +98,7 @@ public class Login extends AppCompatActivity {
             signInWithEmail(emailOrUsername, password);
         }
         else {
-            fetchEmailFromUsername(emailOrUsername, password);
+            getEmailFromUsername(emailOrUsername, password);
         }
     }
 
@@ -121,18 +118,26 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private void fetchEmailFromUsername(String username, String password) {
+    private void getEmailFromUsername(String username, String password) {
+        Log.d(TAG, "Fetching email for username: " + username);
         fStore.collection("users").whereEqualTo("username", username).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful() && !task.getResult().isEmpty()) {
-                    DocumentSnapshot document = task.getResult().getDocuments().get(0);
-                    String email = document.getString("email");
-                    signInWithEmail(email, password);
+                if (task.isSuccessful()) {
+                    QuerySnapshot querySnapshot = task.getResult();
+                    if (!querySnapshot.isEmpty()) {
+                        DocumentSnapshot document = querySnapshot.getDocuments().get(0);
+                        String email = document.getString("email");
+                        signInWithEmail(email, password);
+                    }
+                    else {
+                        progressBarLogin.setVisibility(View.GONE);
+                        Toast.makeText(getApplicationContext(), "Username not found!!", Toast.LENGTH_LONG).show();
+                    }
                 }
                 else {
                     progressBarLogin.setVisibility(View.GONE);
-                    Toast.makeText(getApplicationContext(), "Username not found!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Failed to fetch email!!", Toast.LENGTH_LONG).show();
                 }
             }
         });

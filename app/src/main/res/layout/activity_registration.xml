@@ -80,7 +80,7 @@
                             android:background="@null"
                             android:backgroundTint="@android:color/transparent"
                             android:drawableTint="@color/sea_green"
-                            android:hint="@string/enter_first_name"
+                            android:hint="@string/first_name"
                             android:inputType="textPersonName"
                             android:textColor="@color/white"
                             android:textColorHighlight="@color/sea_green" />
@@ -108,7 +108,7 @@
                             android:background="@null"
                             android:backgroundTint="@android:color/transparent"
                             android:drawableTint="@color/sea_green"
-                            android:hint="@string/enter_last_name"
+                            android:hint="@string/last_name"
                             android:inputType="textPersonName"
                             android:textColor="@color/white"
                             android:textColorHighlight="@color/sea_green" />
@@ -137,7 +137,7 @@
                         android:background="@null"
                         android:backgroundTint="@android:color/transparent"
                         android:drawableTint="@color/sea_green"
-                        android:hint="@string/enter_username"
+                        android:hint="@string/username"
                         android:inputType="text"
                         android:textColor="@color/white"
                         android:textColorHighlight="@color/sea_green" />

@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,16 +52,11 @@ public class Registration extends AppCompatActivity {
         editTextConfirmPasswordRegister = findViewById(R.id.editTextConfirmPasswordRegister);
         textViewSignUp = findViewById(R.id.textViewSignUp);
 
-        /* Ma direct ang users to dashboard kung logged in pa sila
-
+        // If logged in pa ang user, ma redirect ang user to the dashboard
         if (fAuth.getCurrentUser() != null) {
-            Intent intent = new Intent(Login.this, Dashboard.class);
-
+            Intent intent = new Intent(Registration.this, Dashboard.class);
             startActivity(intent);
-            finish();
         }
-
-        */
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +69,6 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Registration.this, Login.class);
-
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +97,7 @@ public class Registration extends AppCompatActivity {
             return;
         }
         if(TextUtils.isEmpty(username)){
-            Toast.makeText(getApplicationContext(), "Please user name!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter user name!!", Toast.LENGTH_LONG).show();
             progressBarRegister.setVisibility(View.GONE);
             return;
         }
@@ -122,11 +117,45 @@ public class Registration extends AppCompatActivity {
             return;
         }
         if(!confirm_password.equals(password)){
-            Toast.makeText(getApplicationContext(), "Passwords does not match!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Passwords do not match!!", Toast.LENGTH_LONG).show();
             progressBarRegister.setVisibility(View.GONE);
             return;
         }
 
+        checkUsernameAndEmail(username, email, new OnUsernameAndEmailCheckCompleteListener() {
+            @Override
+            public void onCheckComplete(boolean isUnique) {
+                if (isUnique) {
+                    createUser(first_name, last_name, username, email, password);
+                }
+                else {
+                    progressBarRegister.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), "Username or email is already taken!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
+    private void checkUsernameAndEmail(String username, String email, OnUsernameAndEmailCheckCompleteListener listener) {
+        fStore.collection("users").whereEqualTo("username", username).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful() && task.getResult().isEmpty()) {
+                    fStore.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            listener.onCheckComplete(task.isSuccessful() && task.getResult().isEmpty());
+                        }
+                    });
+                }
+                else {
+                    listener.onCheckComplete(false);
+                }
+            }
+        });
+    }
+
+    private void createUser(String first_name, String last_name, String username, String email, String password) {
         fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
             @Override
             public void onComplete(@NonNull Task<AuthResult> task){
@@ -154,5 +183,9 @@ public class Registration extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    interface OnUsernameAndEmailCheckCompleteListener {
+        void onCheckComplete(boolean isUnique);
     }
 }

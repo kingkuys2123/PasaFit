@@ -29,16 +29,11 @@ public class MainActivity extends AppCompatActivity {
         init();
         fAuth = FirebaseAuth.getInstance();
 
-        /* Ma direct ang users to dashboard kung logged in pa sila
-
+        // If logged in pa ang user, ma redirect ang user to the dashboard
         if (fAuth.getCurrentUser() != null) {
-            Intent intent = new Intent(Login.this, Dashboard.class);
-
+            Intent intent = new Intent(MainActivity.this, Dashboard.class);
             startActivity(intent);
-            finish();
         }
-
-        */
 
         btnMainGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override

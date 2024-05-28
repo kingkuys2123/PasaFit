@@ -7,40 +7,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class ExerciseList extends AppCompatActivity {
+public class ViewExercise extends AppCompatActivity {
 
-    TextView textViewExerciseListHeader;
+    Button btnBackExercise;
 
     ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
-
-    Button btnBackExerciseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise_list);
+        setContentView(R.layout.activity_view_exercise);
 
         init();
 
-        Intent intent = getIntent();
-
-        String exercise_type = intent.getStringExtra("exercise_type_key");
-
-        textViewExerciseListHeader.setText(exercise_type + " Exercises");
-
-        btnBackExerciseList.setOnClickListener(new View.OnClickListener() {
+        btnBackExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(ViewExercise.this, ExerciseList.class);
+                startActivity(intent);
             }
         });
 
         nav_btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseList.this, Dashboard.class);
+                Intent intent = new Intent(ViewExercise.this, Dashboard.class);
 
                 startActivity(intent);
             }
@@ -49,7 +41,7 @@ public class ExerciseList extends AppCompatActivity {
         nav_btn_trackers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseList.this, Tracker.class);
+                Intent intent = new Intent(ViewExercise.this, Tracker.class);
 
                 startActivity(intent);
             }
@@ -58,7 +50,7 @@ public class ExerciseList extends AppCompatActivity {
         nav_btn_calculator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseList.this, Fitness_Calculator.class);
+                Intent intent = new Intent(ViewExercise.this, Fitness_Calculator.class);
 
                 startActivity(intent);
             }
@@ -67,7 +59,7 @@ public class ExerciseList extends AppCompatActivity {
         nav_btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseList.this, UserProfile.class);
+                Intent intent = new Intent(ViewExercise.this, UserProfile.class);
 
                 startActivity(intent);
             }
@@ -76,7 +68,7 @@ public class ExerciseList extends AppCompatActivity {
         nav_btn_exercises.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExerciseList.this, ExercisesCategories.class);
+                Intent intent = new Intent(ViewExercise.this, ExercisesCategories.class);
 
                 startActivity(intent);
             }
@@ -85,13 +77,13 @@ public class ExerciseList extends AppCompatActivity {
     }
 
     public void init(){
-        textViewExerciseListHeader = findViewById(R.id.textViewExerciseListHeader);
-        btnBackExerciseList = findViewById(R.id.btnBackExerciseList);
+        btnBackExercise = findViewById(R.id.btnBackExerciseUserProfile);
 
-        nav_btn_home = findViewById(R.id.nav_btn_home_exercise_list);
-        nav_btn_trackers = findViewById(R.id.nav_btn_trackers_exercise_list);
-        nav_btn_calculator = findViewById(R.id.nav_btn_calculator_exercise_list);
-        nav_btn_profile = findViewById(R.id.nav_btn_profile_exercise_list);
-        nav_btn_exercises = findViewById(R.id.nav_btn_exercises_exercise_list);
+        nav_btn_home = findViewById(R.id.nav_btn_home_view_exercise);
+        nav_btn_trackers = findViewById(R.id.nav_btn_trackers_view_exercise);
+        nav_btn_calculator = findViewById(R.id.nav_btn_calculator_view_exercise);
+        nav_btn_profile = findViewById(R.id.nav_btn_profile_view_exercise);
+        nav_btn_exercises = findViewById(R.id.nav_btn_exercise_view_exercise);
+
     }
 }

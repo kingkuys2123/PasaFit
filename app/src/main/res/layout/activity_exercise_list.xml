@@ -64,6 +64,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/nav_btn_home_exercise_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -73,6 +74,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_exercises_exercise_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -82,6 +84,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_trackers_exercise_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -91,6 +94,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_calculator_exercise_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -100,6 +104,7 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_profile_exercise_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

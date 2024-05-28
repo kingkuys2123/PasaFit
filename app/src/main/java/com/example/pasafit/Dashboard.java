@@ -16,12 +16,13 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.auth.User;
 
 public class Dashboard extends AppCompatActivity {
 
     TextView textViewHelloMessage;
 
-    ImageButton btn_dashboard_exercises, btn_dashboard_tracker, btn_dashboard_calc;
+    ImageButton btn_dashboard_exercises, btn_dashboard_tracker, btn_dashboard_calc, btn_dashboard_user_profile;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -31,12 +32,12 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        textViewHelloMessage = findViewById(R.id.textViewHelloMessage);
-
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
         FirebaseUser currentUser = fAuth.getCurrentUser();
+
+        init();
 
         if (currentUser == null) {
             Intent intent = new Intent(Dashboard.this, Home.class);
@@ -55,7 +56,6 @@ public class Dashboard extends AppCompatActivity {
                 }
             }
         });
-        btn_dashboard_tracker = findViewById(R.id.btn_dashboard_track);
 
         btn_dashboard_tracker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +65,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        btn_dashboard_exercises = findViewById(R.id.btn_dashboard_exercises);
         btn_dashboard_exercises.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,8 +73,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        btn_dashboard_calc = findViewById(R.id.btn_dashboard_calc);
-
         btn_dashboard_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,5 +80,23 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_dashboard_user_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard.this, UserProfile.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    public void init(){
+        btn_dashboard_tracker = findViewById(R.id.nav_btn_tracker_dashboard);
+        btn_dashboard_exercises = findViewById(R.id.nav_btn_exercise_dashboard);
+        btn_dashboard_calc = findViewById(R.id.nav_btn_calculator_dashboard);
+        btn_dashboard_user_profile = findViewById(R.id.nav_btn_user_profile_dashboard);
+
+        textViewHelloMessage = findViewById(R.id.textViewHelloMessage);
     }
 }

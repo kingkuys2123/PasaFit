@@ -25,6 +25,7 @@ public class Fitness_Calculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fitness_calculator);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -35,9 +36,6 @@ public class Fitness_Calculator extends AppCompatActivity {
         btnBMR = findViewById(R.id.btn_calc_bmr);
         btnIBW = findViewById(R.id.btn_calc_weight);
         btnBodyFat = findViewById(R.id.btn_calc_bodyfat);
-
-
-
 
         txtBMI = findViewById(R.id.txt_calc_bmi);
         txtBMI.setOnClickListener(new View.OnClickListener() {

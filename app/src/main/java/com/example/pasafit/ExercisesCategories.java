@@ -8,11 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.google.firebase.firestore.auth.User;
-
 public class ExercisesCategories extends AppCompatActivity {
 
-    ImageButton btn_exercise_list_balance_next, btn_exercise_list_strength_next, btn_exercise_list_endurance_next, btn_exercise_list_flexibility_next, btn_exercise_category_home, btn_exercise_category_trackers, btn_exercise_category_calculator, btn_exercise_category_profile;
+    ImageButton btn_exercise_list_balance_next, btn_exercise_list_strength_next, btn_exercise_list_endurance_next, btn_exercise_list_flexibility_next, nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile;
 
     Button btnBackExerciseCategories;
 
@@ -21,7 +19,7 @@ public class ExercisesCategories extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises_categories);
 
-        initBtns();
+        init();
 
         btn_exercise_list_endurance_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +66,7 @@ public class ExercisesCategories extends AppCompatActivity {
             }
         });
 
-        btn_exercise_category_home.setOnClickListener(new View.OnClickListener() {
+        nav_btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExercisesCategories.this, Dashboard.class);
@@ -77,7 +75,7 @@ public class ExercisesCategories extends AppCompatActivity {
             }
         });
 
-        btn_exercise_category_trackers.setOnClickListener(new View.OnClickListener() {
+        nav_btn_trackers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExercisesCategories.this, Tracker.class);
@@ -86,7 +84,7 @@ public class ExercisesCategories extends AppCompatActivity {
             }
         });
 
-        btn_exercise_category_calculator.setOnClickListener(new View.OnClickListener() {
+        nav_btn_calculator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExercisesCategories.this, Fitness_Calculator.class);
@@ -95,7 +93,7 @@ public class ExercisesCategories extends AppCompatActivity {
             }
         });
 
-        btn_exercise_category_profile.setOnClickListener(new View.OnClickListener() {
+        nav_btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExercisesCategories.this, UserProfile.class);
@@ -115,16 +113,16 @@ public class ExercisesCategories extends AppCompatActivity {
 
     }
 
-    public void initBtns(){
+    public void init(){
         btn_exercise_list_balance_next = findViewById(R.id.btn_exercise_list_balance_next);
         btn_exercise_list_strength_next = findViewById(R.id.btn_exercise_list_strength_next);
         btn_exercise_list_endurance_next = findViewById(R.id.btn_exercise_list_endurance_next);
         btn_exercise_list_flexibility_next = findViewById(R.id.btn_exercise_list_flexibility_next);
 
-        btn_exercise_category_home = findViewById(R.id.btn_exercise_category_home);
-        btn_exercise_category_trackers = findViewById(R.id.btn_exercise_category_trackers);
-        btn_exercise_category_calculator = findViewById(R.id.btn_exercise_category_calculator);
-        btn_exercise_category_profile = findViewById(R.id.btn_exercise_category_profile);
+        nav_btn_home = findViewById(R.id.nav_btn_home_exercise_categories);
+        nav_btn_trackers = findViewById(R.id.nav_btn_trackers_exercise_categories);
+        nav_btn_calculator = findViewById(R.id.nav_btn_calculator_exercise_categories);
+        nav_btn_profile = findViewById(R.id.nav_btn_profile_exercise_categories);
 
         btnBackExerciseCategories = findViewById(R.id.btnBackExerciseCategories);
     }

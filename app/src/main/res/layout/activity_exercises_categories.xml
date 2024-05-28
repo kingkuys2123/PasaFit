@@ -294,7 +294,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_exercise_category_home"
+            android:id="@+id/nav_btn_home_exercise_categories"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -304,7 +304,7 @@
             app:tint="@color/white" />
 
         <ImageButton
-            android:id="@+id/btn_exercise_category_exercise"
+            android:id="@+id/nav_btn_execise_exercise_categories"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -314,7 +314,7 @@
             app:tint="@color/white" />
 
         <ImageButton
-            android:id="@+id/btn_exercise_category_trackers"
+            android:id="@+id/nav_btn_trackers_exercise_categories"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -324,7 +324,7 @@
             app:tint="@color/white" />
 
         <ImageButton
-            android:id="@+id/btn_exercise_category_calculator"
+            android:id="@+id/nav_btn_calculator_exercise_categories"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -334,7 +334,7 @@
             app:tint="@color/white" />
 
         <ImageButton
-            android:id="@+id/btn_exercise_category_profile"
+            android:id="@+id/nav_btn_profile_exercise_categories"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

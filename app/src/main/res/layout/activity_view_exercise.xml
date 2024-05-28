@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Exercise">
+    tools:context=".ViewExercise">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btnBackExercise"
+                android:id="@+id/btnBackExerciseUserProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/night"
@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewExerciseHeader"
+                android:id="@+id/textViewExerciseHeaderUserProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/exercise"
@@ -55,7 +55,7 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:background="@color/eerie_black"
         android:orientation="horizontal"
         android:padding="8dp"
@@ -64,8 +64,9 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/nav_btn_home_view_exercise"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
@@ -73,32 +74,44 @@
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_exercise_view_exercise"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
-            android:src="@drawable/system_regular_10_analytics"
+            android:src="@drawable/system_regular_199_attribution"
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_trackers_view_exercise"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
-            android:src="@drawable/system_regular_100_flag"
+            android:src="@drawable/system_regular_130_location_user"
             app:tint="@color/white" />
 
         <ImageButton
+            android:id="@+id/nav_btn_calculator_view_exercise"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/system_regular_197_calculate"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/nav_btn_profile_view_exercise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerInside"
             android:src="@drawable/system_regular_8_account"
             app:tint="@color/white" />
-
     </LinearLayout>
 
 
