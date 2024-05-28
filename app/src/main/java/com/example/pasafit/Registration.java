@@ -32,7 +32,7 @@ public class Registration extends AppCompatActivity {
     private ProgressBar progressBarRegister;
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
-    String userID;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +42,7 @@ public class Registration extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        editTxtFirstNameRegister = findViewById(R.id.editTxtFirstNameRegister);
-        editTxtLastNameRegister = findViewById(R.id.editTxtLastNameRegister);
-        editTxtUsernameRegister = findViewById(R.id.editTxtUsernameRegister);
-        editTxtEmailRegister = findViewById(R.id.editTxtEmailRegister);
-        editTxtPasswordRegister = findViewById(R.id.editTxtPasswordRegister);
-        btnRegister = findViewById(R.id.btnRegister);
-        progressBarRegister = findViewById(R.id.progressBarRegister);
-        editTextConfirmPasswordRegister = findViewById(R.id.editTextConfirmPasswordRegister);
-        textViewSignUp = findViewById(R.id.textViewSignUp);
+        init();
 
         // If logged in pa ang user, ma redirect ang user to the dashboard
         if (fAuth.getCurrentUser() != null) {
@@ -187,5 +179,21 @@ public class Registration extends AppCompatActivity {
 
     interface OnUsernameAndEmailCheckCompleteListener {
         void onCheckComplete(boolean isUnique);
+    }
+
+    private void init(){
+        editTxtFirstNameRegister = findViewById(R.id.editTxtFirstNameRegister);
+        editTxtLastNameRegister = findViewById(R.id.editTxtLastNameRegister);
+        editTxtUsernameRegister = findViewById(R.id.editTxtUsernameRegister);
+        editTxtEmailRegister = findViewById(R.id.editTxtEmailRegister);
+        editTxtPasswordRegister = findViewById(R.id.editTxtPasswordRegister);
+
+        btnRegister = findViewById(R.id.btnRegister);
+
+        progressBarRegister = findViewById(R.id.progressBarRegister);
+
+        editTextConfirmPasswordRegister = findViewById(R.id.editTextConfirmPasswordRegister);
+
+        textViewSignUp = findViewById(R.id.textViewSignUp);
     }
 }

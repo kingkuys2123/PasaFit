@@ -10,9 +10,9 @@ import android.widget.ImageButton;
 
 public class ExercisesCategories extends AppCompatActivity {
 
-    ImageButton btn_exercise_list_balance_next, btn_exercise_list_strength_next, btn_exercise_list_endurance_next, btn_exercise_list_flexibility_next, nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile;
+    private ImageButton btn_exercise_list_balance_next, btn_exercise_list_strength_next, btn_exercise_list_endurance_next, btn_exercise_list_flexibility_next, nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile;
 
-    Button btnBackExerciseCategories;
+    private Button btnBackExerciseCategories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

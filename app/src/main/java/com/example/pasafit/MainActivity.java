@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void init(){
+    private void init(){
         btnMainGetStarted = findViewById(R.id.btnMainGetStarted);
         textViewOnboardWelcomeHeader = findViewById(R.id.textViewOnboardWelcomeHeader);
 

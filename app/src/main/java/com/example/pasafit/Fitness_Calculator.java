@@ -17,8 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Fitness_Calculator extends AppCompatActivity {
 
-    ImageButton btnBMI, btnBMR, btnIBW, btnBodyFat;
-    TextView txtBMI, txtBMR, txtIBW, txtBodyFat;
+    private ImageButton btnBMI, btnBMR, btnIBW, btnBodyFat;
+    private TextView txtBMI, txtBMR, txtIBW, txtBodyFat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

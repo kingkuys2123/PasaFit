@@ -11,11 +11,11 @@ import android.widget.TextView;
 
 public class ExerciseList extends AppCompatActivity {
 
-    TextView textViewExerciseListHeader;
+    private TextView textViewExerciseListHeader;
 
-    ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
+    private ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
 
-    Button btnBackExerciseList;
+    private Button btnBackExerciseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -26,11 +26,11 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class UserProfile extends AppCompatActivity {
 
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    String userID;
-    ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_exercise, imageButtonEditPersonalInformation;
-    Button btnBackExerciseUserProfile;
+    private FirebaseAuth fAuth;
+    private FirebaseFirestore fStore;
+    private String userID;
+    private ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_exercise, imageButtonEditPersonalInformation;
+    private Button btnBackExerciseUserProfile;
 
     TextView profileTextViewFirstName, profileTextViewLastName, profileTextViewUsername, profileTextViewEmail, textViewChangeEmailUserProfile, textViewChangePasswordUserProfile, textViewDeleteAccountUserProfile, textViewLogOutUserProfile;
 
@@ -250,7 +250,7 @@ public class UserProfile extends AppCompatActivity {
 
     }
 
-    public void init(){
+    private void init(){
         btnBackExerciseUserProfile = findViewById(R.id.btnBackExerciseUserProfile);
 
         nav_btn_home = findViewById(R.id.nav_btn_home_user_profile);

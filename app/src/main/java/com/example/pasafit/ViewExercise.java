@@ -10,9 +10,9 @@ import android.widget.ImageButton;
 
 public class ViewExercise extends AppCompatActivity {
 
-    Button btnBackExercise;
+    private Button btnBackExercise;
 
-    ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
+    private ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class ViewExercise extends AppCompatActivity {
 
     }
 
-    public void init(){
+    private void init(){
         btnBackExercise = findViewById(R.id.btnBackExerciseUserProfile);
 
         nav_btn_home = findViewById(R.id.nav_btn_home_view_exercise);

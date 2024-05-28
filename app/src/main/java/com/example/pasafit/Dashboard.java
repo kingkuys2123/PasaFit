@@ -20,12 +20,11 @@ import com.google.firebase.firestore.auth.User;
 
 public class Dashboard extends AppCompatActivity {
 
-    TextView textViewHelloMessage;
-
-    ImageButton btn_dashboard_exercises, btn_dashboard_tracker, btn_dashboard_calc, btn_dashboard_user_profile;
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    String userID;
+    private TextView textViewHelloMessage;
+    private ImageButton btn_dashboard_exercises, btn_dashboard_tracker, btn_dashboard_calc, btn_dashboard_user_profile;
+    private FirebaseAuth fAuth;
+    private FirebaseFirestore fStore;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
