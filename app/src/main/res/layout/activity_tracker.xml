@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#10130F"
+    android:background="@drawable/bg"
     android:theme="@style/Theme.PasaFit"
     tools:context=".Tracker">
 
@@ -117,7 +117,7 @@
             app:tint="@color/white" />
 
         <ImageButton
-            android:id="@+id/nav_btn_execise_tracker"
+            android:id="@+id/nav_btn_exercise_tracker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
