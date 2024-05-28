@@ -10,8 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Tracker extends AppCompatActivity {
 
-    Button btnTrackerStepTracker, btnTrackerSleepTracker;
-    ImageButton btnBackTrackers;
+    private Button btnTrackerStepTracker, btnTrackerSleepTracker, btnBackTrackers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +42,11 @@ public class Tracker extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void init(){
+        btnBackTrackers = findViewById(R.id.btnBackTrackers);
         btnTrackerStepTracker = findViewById(R.id.btnTrackerStepTracker);
-        btnTrackerSleepTracker = findViewById(R.id.btnTrackerStepTracker);
+        btnTrackerSleepTracker = findViewById(R.id.btnTrackerSleepTracker);
     }
 }
