@@ -52,4 +52,7 @@
     <string name="change_password">Change Password</string>
     <string name="change_email">Change Email</string>
     <string name="logout">Log Out</string>
+    <string name="trackers">Trackers</string>
+    <string name="step_tracker">Step Tracker</string>
+    <string name="sleep_tracker">Sleep Tracker</string>
 </resources>

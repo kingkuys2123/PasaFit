@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class ViewExercise extends AppCompatActivity {
 
-    private Button btnBackExercise;
+    private Button btnBackViewExercise;
 
     private ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_profile, nav_btn_exercises;
 
@@ -21,7 +21,7 @@ public class ViewExercise extends AppCompatActivity {
 
         init();
 
-        btnBackExercise.setOnClickListener(new View.OnClickListener() {
+        btnBackViewExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewExercise.this, ExerciseList.class);
@@ -77,7 +77,7 @@ public class ViewExercise extends AppCompatActivity {
     }
 
     private void init(){
-        btnBackExercise = findViewById(R.id.btnBackExerciseUserProfile);
+        btnBackViewExercise = findViewById(R.id.btnBackViewExercise);
 
         nav_btn_home = findViewById(R.id.nav_btn_home_view_exercise);
         nav_btn_trackers = findViewById(R.id.nav_btn_trackers_view_exercise);

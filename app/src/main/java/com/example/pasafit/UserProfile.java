@@ -30,9 +30,9 @@ public class UserProfile extends AppCompatActivity {
     private FirebaseFirestore fStore;
     private String userID;
     private ImageButton nav_btn_home, nav_btn_trackers, nav_btn_calculator, nav_btn_exercise, imageButtonEditPersonalInformation;
-    private Button btnBackExerciseUserProfile;
+    private Button btnBackUserProfile;
 
-    TextView profileTextViewFirstName, profileTextViewLastName, profileTextViewUsername, profileTextViewEmail, textViewChangeEmailUserProfile, textViewChangePasswordUserProfile, textViewDeleteAccountUserProfile, textViewLogOutUserProfile;
+    private TextView profileTextViewFirstName, profileTextViewLastName, profileTextViewUsername, profileTextViewEmail, textViewChangeEmailUserProfile, textViewChangePasswordUserProfile, textViewDeleteAccountUserProfile, textViewLogOutUserProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
-        btnBackExerciseUserProfile.setOnClickListener(new View.OnClickListener() {
+        btnBackUserProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserProfile.this, ExerciseList.class);
@@ -251,7 +251,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     private void init(){
-        btnBackExerciseUserProfile = findViewById(R.id.btnBackExerciseUserProfile);
+        btnBackUserProfile = findViewById(R.id.btnBackUserProfile);
 
         nav_btn_home = findViewById(R.id.nav_btn_home_user_profile);
         nav_btn_trackers = findViewById(R.id.nav_btn_trackers_user_profile);
