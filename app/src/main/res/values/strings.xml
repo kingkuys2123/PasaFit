@@ -17,7 +17,7 @@
     <string name="enter_email">Email</string>
     <string name="enter_password">Password</string>
     <string name="reenter_password">Confirm Password</string>
-    <string name="placeholder">Lorem ipsum...</string>
+    <string name="placeholder">Lorem ipsum…</string>
     <string name="login_message">Log In to your Account</string>
     <string name="register_message">Create your Account</string>
     <string name="have_an_account">Already have an account?</string>
@@ -44,6 +44,16 @@
     <string name="category_flexibility">Flexibility</string>
     <string name="exercises">Exercises</string>
     <string name="exercise">Exercise</string>
+    <string name="bmi_dashboard_title">Body Mass Index Calculator</string>
+    <string name="bmi_input_age">Input Age</string>
+    <string name="bmi_input_height">Input Height</string>
+    <string name="bmi_input_weight">Input Weight</string>
+    <string name="bmr_dashboard_title">Basal Metabolic Rate Calculator</string>
+    <string name="bmr_input_age">Input Age</string>
+    <string name="bmr_input_height">Input Height</string>
+    <string name="bmr_input_weight">Input Weight</string>
+    <string name="bodyfat_dashboard_title">Body Fat Calculator</string>
+    <string name="idealweight_dashboard_title">Body Mass Index Calculator</string>
     <string name="na">NA</string>
     <string name="user_profile">User Profile</string>
     <string name="personal_info">Personal Information:</string>
@@ -62,4 +72,13 @@
     <string name="miles">Miles: 0</string>
     <string name="minutes">Min: 0</string>
     <string name="kcal">Kcal: 0</string>
+    <string name="bmi_info_full">BMI (Body Mass Index) is an estimate of body fat based on height and weight.</string>
+    <string name="gender_select">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="result">Results will display here</string>
+    <string name="centimeter">In centimeter</string>
+    <string name="kilogram">In kilogram</string>
+    <string name="age">Year</string>
+    <string name="bmr_info_full">BMR (Basal Metabolic Rate) is the number of calories required to keep your body functioning at rest.</string>
 </resources>
