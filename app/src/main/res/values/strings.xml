@@ -72,6 +72,6 @@
     <string name="result">Results will display here</string>
     <string name="centimeter">In centimeter</string>
     <string name="kilogram">In kilogram</string>
-    <string name="age">Year</string>
+    <string name="age">In numbers (ex. 29)</string>
     <string name="bmr_info_full">BMR (Basal Metabolic Rate) is the number of calories required to keep your body functioning at rest.</string>
 </resources>

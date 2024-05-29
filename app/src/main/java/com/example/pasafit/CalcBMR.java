@@ -5,6 +5,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ public class CalcBMR extends AppCompatActivity {
     private EditText weightInput;
     private RadioButton maleButton, femaleButton;
     private TextView resultText;
+    private RadioGroup gender_group;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class CalcBMR extends AppCompatActivity {
         maleButton = findViewById(R.id.bmr_gender_male);
         femaleButton = findViewById(R.id.bmr_gender_female);
         resultText = findViewById(R.id.bmr_result);
+
+        gender_group = findViewById(R.id.genderGroup);
 
         TextWatcher textWatcher = new TextWatcher() {
             @Override
@@ -45,6 +49,13 @@ public class CalcBMR extends AppCompatActivity {
         ageInput.addTextChangedListener(textWatcher);
         heightInput.addTextChangedListener(textWatcher);
         weightInput.addTextChangedListener(textWatcher);
+
+        gender_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                calculateBMR();
+            }
+        });
     }
 
     public void calculateBMR() {
@@ -55,6 +66,18 @@ public class CalcBMR extends AppCompatActivity {
         int age = Integer.parseInt(ageInput.getText().toString());
         double height = Double.parseDouble(heightInput.getText().toString());
         double weight = Double.parseDouble(weightInput.getText().toString());
+
+        // Validate height and weight
+        if (height < 50 || height > 300) {
+            heightInput.setError("Invalid height. Please enter a value between 50 and 300.");
+            return;
+        }
+
+        if (weight < 10 || weight > 500) {
+            weightInput.setError("Invalid weight. Please enter a value between 10 and 500.");
+            return;
+        }
+
         double bmr;
 
         if (maleButton.isChecked()) {

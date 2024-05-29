@@ -187,6 +187,7 @@
                         android:textStyle="bold" />
 
                     <RadioGroup
+                        android:id="@+id/genderGroup"
                         android:layout_width="191dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
