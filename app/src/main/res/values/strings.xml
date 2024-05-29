@@ -81,4 +81,14 @@
     <string name="kilogram">In kilogram</string>
     <string name="age">In numbers (ex. 29)</string>
     <string name="bmr_info_full">BMR (Basal Metabolic Rate) is the number of calories required to keep your body functioning at rest.</string>
+    <string name="bodyfat_input_age">Input Age</string>
+    <string name="bodyfat_input_height">Input Height</string>
+    <string name="bodyfat_input_weight">Input Weight</string>
+    <string name="bodyfat_input_waist">Input Waist</string>
+    <string name="bodyfat_input_neck">Input Neck</string>
+    <string name="bodyfat_input_hip">Input Hip</string>
+    <string name="ibw_input_height">Input Height</string>
+    <string name="ibw_input_age">Input Age</string>
+    <string name="ibw_info_full">Ideal Body Weight (IBW) is the weight that is believed to be maximally healthful for a person, based on height and age.</string>
+    <string name="ibw_dashboard_title">Ideal Body Weight Calculator</string>
 </resources>
