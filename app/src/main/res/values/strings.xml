@@ -38,6 +38,7 @@
     <string name="txt_calc_ideal_weight_tooltip">Calculate your Ideal Weight</string>
     <string name="choose_category">Choose Category</string>
     <string name="left_arrow">&lt;</string>
+    <string name="right_arrow">&gt;</string>
     <string name="category_strength">Strength</string>
     <string name="category_endurance">Endurance</string>
     <string name="category_balance">Balance</string>
@@ -81,4 +82,7 @@
     <string name="kilogram">In kilogram</string>
     <string name="age">Year</string>
     <string name="bmr_info_full">BMR (Basal Metabolic Rate) is the number of calories required to keep your body functioning at rest.</string>
+    <string name="exercise_title">Exercise Title</string>
+    <string name="description">Description:</string>
+    <string name="instructions">Instructions:</string>
 </resources>
