@@ -115,11 +115,11 @@ public class StepTracker extends AppCompatActivity {
         nav_btn_profile = findViewById(R.id.nav_btn_profile_step_tracker);
         nav_btn_exercises = findViewById(R.id.nav_btn_exercise_step_tracker);
 
-        stepCountView = findViewById(R.id.step_count);
+        stepCountView = findViewById(R.id.step_count_step_tracker);
         stepsLabelView = findViewById(R.id.steps_label);
-        distanceMilesView = findViewById(R.id.distance_miles);
-        durationMinutesView = findViewById(R.id.duration_minutes);
-        caloriesBurnedView = findViewById(R.id.calories_burned);
+        distanceMilesView = findViewById(R.id.distance_miles_step_tracker);
+        durationMinutesView = findViewById(R.id.duration_minutes_step_tracker);
+        caloriesBurnedView = findViewById(R.id.calories_burned_step_tracker);
 
         btnStartStepTracker = findViewById(R.id.btnStartStepTracker);
         btnRestartStepTracker = findViewById(R.id.btnRestartStepTracker);
