@@ -74,13 +74,13 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/step_count"
+                    android:id="@+id/step_count_step_tracker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:padding="8dp"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textColor="@color/white"
                     android:textSize="60sp" />
 
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="8dp"
-                    android:text="Steps"
+                    android:text="@string/steps"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -106,31 +106,31 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/distance_miles"
+                    android:id="@+id/distance_miles_step_tracker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:padding="8dp"
-                    android:text="Miles: 0"
+                    android:text="@string/miles"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/duration_minutes"
+                    android:id="@+id/duration_minutes_step_tracker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:padding="8dp"
-                    android:text="Min: 0"
+                    android:text="@string/minutes"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/calories_burned"
+                    android:id="@+id/calories_burned_step_tracker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="Kcal: 0"
+                    android:text="@string/kcal"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -154,7 +154,7 @@
             android:layout_height="64dp"
             android:layout_weight="1"
             android:backgroundTint="@color/sea_green"
-            android:text="Start"
+            android:text="@string/start"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -164,13 +164,12 @@
             android:layout_height="64dp"
             android:layout_weight="1"
             android:backgroundTint="@color/sea_green"
-            android:text="Restart"
+            android:text="@string/restart"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:visibility="gone" />
     </LinearLayout>
 
-    <!-- Navigation Layout -->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"

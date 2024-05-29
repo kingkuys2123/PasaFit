@@ -65,6 +65,13 @@
     <string name="trackers">Trackers</string>
     <string name="step_tracker">Step Tracker</string>
     <string name="sleep_tracker">Sleep Tracker</string>
+    <string name="start">Start</string>
+    <string name="restart">Restart</string>
+    <string name="zero">0</string>
+    <string name="steps">Steps</string>
+    <string name="miles">Miles: 0</string>
+    <string name="minutes">Min: 0</string>
+    <string name="kcal">Kcal: 0</string>
     <string name="bmi_info_full">BMI (Body Mass Index) is an estimate of body fat based on height and weight.</string>
     <string name="gender_select">Gender</string>
     <string name="gender_male">Male</string>
