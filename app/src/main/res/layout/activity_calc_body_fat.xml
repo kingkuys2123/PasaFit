@@ -5,6 +5,342 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/eerie_black"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp"
     tools:context=".CalcBodyFat">
+
+    <TextView
+        android:id="@+id/txt_body_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/bodyfat_dashboard_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="381dp"
+        android:layout_height="694dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_body_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="99dp">
+
+                <TextView
+                    android:id="@+id/bmr_info"
+                    android:layout_width="372dp"
+                    android:layout_height="51dp"
+                    android:gravity="center"
+                    android:text="@string/bmr_info_full"
+                    android:textColor="@color/sea_green"
+                    android:textStyle="italic"
+                    tools:layout_editor_absoluteX="7dp"
+                    tools:layout_editor_absoluteY="24dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_age"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bodyfat_input_age"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/age"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_height_desc"
+                        android:layout_width="31dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bmr_input_height"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_height"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/centimeter"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_weight"
+                        android:layout_width="59dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bodyfat_input_weight"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/kilogram"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bodyfat_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/gender_select"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/genderGroup"
+                        android:layout_width="191dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/bodyfat_gender_male"
+                            android:layout_width="124dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/gender_male"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/bodyfat_gender_female"
+                            android:layout_width="2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/gender_female"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_neck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bodyfat_input_neck"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_neck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/centimeter"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_input_waist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bodyfat_input_waist"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_waist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/centimeter"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_bodyfat_hip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bodyfat_input_hip"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/bodyfat_input_hip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/centimeter"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/holo_green_light"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bodyfat_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/result"
+                android:textColor="@color/sea_green"
+                android:textSize="24sp"
+                tools:text="@string/result" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
