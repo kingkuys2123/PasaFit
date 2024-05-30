@@ -95,4 +95,5 @@
     <string name="ibw_input_age">Input Age</string>
     <string name="ibw_info_full">Ideal Body Weight (IBW) is the weight that is believed to be maximally healthful for a person, based on height and age.</string>
     <string name="ibw_dashboard_title">Ideal Body Weight Calculator</string>
+    <string name="dashboard_video_info">Get moving and grooving! Regular exercise boosts your mood, strengthens your body, and keeps your mind sharp. Let\'s step it up!</string>
 </resources>
