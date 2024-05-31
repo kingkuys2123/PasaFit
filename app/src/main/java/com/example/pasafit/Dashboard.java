@@ -1,11 +1,15 @@
 package com.example.pasafit;
 
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -25,6 +29,8 @@ public class Dashboard extends AppCompatActivity {
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
     private String userID;
+
+    private WebView youtubeVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +94,21 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+        youtubeVideo = findViewById(R.id.webview_youtube);
+        youtubeVideo.getSettings().setJavaScriptEnabled(true);
+        youtubeVideo.getSettings().setLoadWithOverviewMode(true);
+        youtubeVideo.getSettings().setUseWideViewPort(true);
+
+        String videoID = "0N33utmyeYg";
+        youtubeVideo.loadUrl("https://www.youtube.com/embed/" + videoID);
+
+        youtubeVideo.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url){
+                youtubeVideo.evaluateJavascript("(function() { var onPlayerReady = function() { window.android.onPlayerReady(); };" +
+                        "window.onYouTubeIframeAPIReady = onPlayerReady; })()", null);
+            }
+        });
     }
 
     public void init(){
