@@ -84,7 +84,7 @@ https://github.com/kingkuys2123/PasaFit.git
     <a href="https://github.com/pawekz"><img width="64" title="Carabuena, Paulo Y." src="https://avatars.githubusercontent.com/u/45958147" alt="pawekz" /></a>
     <a href="https://github.com/neilbas"><img width="64" title="Bas, Neil Adrian G." src="https://avatars.githubusercontent.com/u/143286768" alt="neilbas" /></a>
     <a href="https://github.com/kingkuys2123"><img width="64" title="Quitco, Kyle Matthew M." src="https://avatars.githubusercontent.com/u/114457180?v=4" alt="kingkuys2123" /></a>
-    <a href="https://www.facebook.com/xyrilldereck.canete"><img width="64" title="Cañete, Xyrill Dereck N," src="https://i.imgur.com/ZFqN7IP.jpeg" alt="xyrilldereck.canete" /></a>
+    <a href="https://github.com/Amarok1214"><img width="64" title="Cañete, Xyrill Dereck N," src="https://i.imgur.com/ZFqN7IP.jpeg" alt="xyrilldereck.canete" /></a>
   </a>
 
 <br>
